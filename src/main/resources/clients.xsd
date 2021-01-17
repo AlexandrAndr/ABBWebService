@@ -1,0 +1,29 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="getClientsRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="client" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getClientResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="client" type="client"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="client">
+        <xs:sequence>
+            <xs:element name="firstName" type="xs:string"/>
+            <xs:element name="secondName" type="xs:string"/>
+            <xs:element name="lastName" type="xs:string"/>
+            <xs:element name="income" type="xs:int"/>
+            <xs:element name="expenses" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
+
